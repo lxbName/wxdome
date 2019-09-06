@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxdome.mapper.userMapper">
+
+    <select id="userSelect" resultType="com.wxdome.entity.User">
+        select * from user where wxcount = #{wxcount} and password = #{password};
+    </select>
+
+    <select id="findAll" resultType="com.wxdome.entity.User">
+        select * from user;
+    </select>
+
+    <select id="selectPhone" resultType="string">
+        select phone from user where phone = #{phone};
+    </select>
+</mapper>
