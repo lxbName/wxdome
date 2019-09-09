@@ -41,6 +41,10 @@ public class ResultUtils<T> {
         return new ResultUtils(CODE_FAIL, MSG_FAIL);
     }
 
+    public static ResultUtils fail(Object data){
+        return new ResultUtils(CODE_FAIL,MSG_FAIL,data);
+    }
+
     private String code;
 
     private String msg;
